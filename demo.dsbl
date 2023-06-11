@@ -3,3 +3,7 @@ MAKE:
 # DACA:
 ABC:
 	RUN touch a.txt
+	RUN echo Hello World
+	INSTALL cowsay
+	RUN cowsay Hello World
+	CLONE https://codeberg.org/mikolajlubiak/dosible

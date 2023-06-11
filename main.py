@@ -34,7 +34,7 @@ for line in lines:
         subprocess.run(command)
     elif words[0] == "INSTALL":
         packages = words[1:]
-        subprocess.run(packageManager, packages)
-
-print(names)
-print(packageManager)
+        subprocess.run(["sudo"] + packageManager + packages)
+    elif words[0] == "CLONE":
+        args = words[1:]
+        subprocess.run(["git", "clone"] + args)
